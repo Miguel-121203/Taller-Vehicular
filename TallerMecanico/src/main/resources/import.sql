@@ -1,0 +1,2 @@
+INSERT INTO "usuario" (nombre_usuario,nombre, contrasena, rol) VALUES ('mbeltra', 'Miguel Angel', '$2a$10$XcDyClEky6yml6nQUubxiuU1G49tYZ3KBbBbdM1ivPC8bikyAoVPm','ADMINISTRATOR');
+INSERT INTO "usuario" (nombre_usuario,nombre, contrasena, rol) VALUES ('mzapata', 'Miguel Zapata', '$2a$10$2xWFZi1BPjaAcf/BB7.UfegAqSDFg7D.LQ8NzKq/XNXG03udioT.2','CUSTOMER');
