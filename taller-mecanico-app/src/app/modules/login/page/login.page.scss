@@ -1,0 +1,36 @@
+
+.center{
+
+  text-align: center;
+}
+
+
+
+ion-item {
+  font-size: 25px;
+  font-family: 25px;
+}
+
+ion-input {
+  font-size: 20px;
+  font-family: 20px;
+  color:black;
+  text-transform: lowercase;
+  background-color: aliceblue;
+  height: 40px; /* ajusta la altura según sea necesario */
+  width: 100%; /* ajusta el ancho según sea necesario */
+
+}
+
+#containerImg {
+  height: 150px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 3%;
+
+  img {
+    height: 80%;
+    margin: auto;
+  }
+}

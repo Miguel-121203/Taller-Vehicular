@@ -1,0 +1,87 @@
+<ion-content>
+  <form (ngSubmit)="createVehicule()" class="form-container">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title size="12">CREAR NUEVO VEHICULO</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Marca:</ion-label>
+          <ion-input [(ngModel)]="vehiculo.brand" name="brand" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Línea:</ion-label>
+          <ion-input [(ngModel)]="vehiculo.line" name="line" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Placa:</ion-label>
+          <ion-input [(ngModel)]="vehiculo.plate" name="plate" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Modelo:</ion-label>
+          <ion-input [(ngModel)]="vehiculo.model" name="model" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Nivel de Combustible:</ion-label>
+          <ion-input type="number" [(ngModel)]="vehiculo.fuelLevel" name="fuelLevel" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Usuario:</ion-label>
+          <ion-select [(ngModel)]="vehiculo.personId" name="personId" required>
+            <ion-select-option *ngFor="let usuario of usuarios" [value]="usuario">
+              {{ usuario.firstName }} {{ usuario.firstLastName }}
+            </ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Orden:</ion-label>
+          <ion-select [(ngModel)]="vehiculo.orderId" name="orderId" required>
+            <ion-select-option *ngFor="let orden of ordenes" [value]="orden">
+              {{ orden.serviceNumber }}
+            </ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Inventario:</ion-label>
+          <ion-select [(ngModel)]="vehiculo.inventoryId" name="inventoryId" required>
+            <ion-select-option *ngFor="let inventario of inventarios" [value]="inventario">
+              {{ inventario.description }}
+            </ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Servicio:</ion-label>
+          <ion-select [(ngModel)]="vehiculo.servicioId" name="servicioId" required>
+            <ion-select-option *ngFor="let servicio of servicios" [value]="servicio">
+              {{ servicio.description }}
+            </ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button type="submit" expand="full" class="submit-button">Crear Vehículo</ion-button>
+          <ion-item routerLink="/home" expand="full" color="warning">Exit</ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

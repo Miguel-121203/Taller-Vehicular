@@ -1,0 +1,31 @@
+<app-header></app-header>
+<ion-content>
+  <ion-grid class="contain">
+    <ng-container *ngFor="let servicio of servicios">
+      <ion-row class="user-card" [hidden]="servicios.length <= 0">
+        <ion-col size="12" class="contain__title">Servicio {{ servicio.id }}</ion-col>
+      </ion-row>
+      <ion-row class="user-card contain__row">
+        <ion-col size="6" class="contain__title">Descripcion:</ion-col>
+        <ion-col size="6" class="contain__info">{{ servicio.description}}</ion-col>
+        <ion-col size="6" class="contain__title">Cantidad:</ion-col>
+        <ion-col size="6" class="contain__info">{{ servicio.quantity}}</ion-col>
+        <ion-col size="6" class="contain__title">SubTotal:</ion-col>
+        <ion-col size="6" class="contain__info">{{ servicio.subTotal }}</ion-col>
+        <ion-col size="6" class="contain__title">Observaciones:</ion-col>
+        <ion-col size="6" class="contain__info">{{ servicio.observations }}</ion-col>
+        <ion-col size="6" class="contain__title">Responsable Tecnico:</ion-col>
+        <ion-col size="6" class="contain__info">{{ servicio.responsibleTechnician }}</ion-col>
+        <ion-col size="6" class="contain__title">Total:</ion-col>
+        <ion-col size="6" class="contain__info">{{ servicio.total }}</ion-col>
+        <ion-col >
+          <ion-button (click)="deleteService(servicio.id)" color="danger">
+            <ion-icon name="trash"></ion-icon></ion-button>
+          <ion-button (click)="editarserv(servicio.id)" color="warning">
+            <ion-icon name="create"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+</ion-content>
+

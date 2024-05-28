@@ -10,21 +10,23 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TallerMecanicoApplication {
 
+
 	public static void main(String[] args) {
-		SpringApplication.run(TallerMecanicoApplication.class, args);
+		SpringApplication.run(TallerMecanicoApplication.class,args);
 	}
 
-	// CREACION DE CONTRASENAS ENCRIPTADAS
-	// @Autowired
-	// private PasswordEncoder passwordEncoder;
-	//
-	// @Bean
-	// public CommandLineRunner createPasswordCommand() {
-	//
-	// return args -> {
-	// System.out.println(passwordEncoder.encode("hola123"));
-	// System.out.println(passwordEncoder.encode("hola456"));
-	// };
-	// }
+
+	//CREACION DE CONTRASENAS ENCRIPTADAS
+	//@Autowired
+	//private PasswordEncoder passwordEncoder;
+
+	//@Bean
+	//public CommandLineRunner createPasswordCommand(){
+
+	//	return args -> {
+	//		System.out.println(passwordEncoder.encode("clave123"));
+	//		System.out.println(passwordEncoder.encode("clave456"));
+	//	};
+	//}
 
 }

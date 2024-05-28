@@ -1,0 +1,27 @@
+<app-header></app-header>
+<ion-content>
+  <ion-grid class="contain">
+    <ng-container *ngFor="let ordenes of orden">
+      <ion-row class="user-card" [hidden]="orden.length <= 0">
+        <ion-col size="12" class="contain__title">Usuario {{ ordenes.id }}</ion-col>
+      </ion-row>
+      <ion-row class="user-card contain__row">
+        <ion-col size="6" class="contain__title">Numero de orden:</ion-col>
+        <ion-col size="6" class="contain__info">{{ ordenes.orderWork}}</ion-col>
+        <ion-col size="6" class="contain__title">Precio:</ion-col>
+        <ion-col size="6" class="contain__info">{{ ordenes.price }}</ion-col>
+        <ion-col size="6" class="contain__title">Fecha de ingreso:</ion-col>
+        <ion-col size="6" class="contain__info">{{ ordenes.dateEntry }}</ion-col>
+        <ion-col size="6" class="contain__title">Fecha de salida:</ion-col>
+        <ion-col size="6" class="contain__info">{{ ordenes.dateExit }}</ion-col>
+        <ion-col >
+          <ion-button color="danger" (click)="deleteOrde(ordenes.id)">
+            <ion-icon name="trash"></ion-icon></ion-button>
+            <ion-button color="warning" (click)="editarOrde(ordenes.id)">
+              <ion-icon name="create"></ion-icon>  </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+</ion-content>

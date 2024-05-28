@@ -1,0 +1,18 @@
+#toolbar {
+  --ion-background-color: transparent; /* Color de fondo transparente */
+}
+
+ion-row {
+  align-items: center; /* Centrar los elementos verticalmente */
+}
+
+ion-col {
+  padding: 0; /* Eliminar el espacio entre las columnas */
+}
+
+img#img_logo {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Hacer que la imagen sea de bloque para centrarla horizontalmente */
+  margin: 0 auto; /* Centrar la imagen horizontalmente */
+}

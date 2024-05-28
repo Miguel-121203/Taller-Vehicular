@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<ion-content>
+  <ion-grid class="contain">
+    <ng-container *ngFor="let usuario of usuarios">
+      <ion-row class="user-card" [hidden]="usuarios.length <= 0">
+        <ion-col size="12" class="contain__title">Usuario {{ usuario.id }}</ion-col>
+      </ion-row>
+      <ion-row class="user-card contain__row">
+        <ion-col size="6" class="contain__title">Primer nombre:</ion-col>
+        <ion-col size="6" class="contain__info">{{ usuario.firstName }}</ion-col>
+        <ion-col size="6" class="contain__title">Segundo nombre:</ion-col>
+        <ion-col size="6" class="contain__info">{{ usuario.secondName }}</ion-col>
+        <ion-col size="6" class="contain__title">Primer apellido:</ion-col>
+        <ion-col size="6" class="contain__info">{{ usuario.firstLastName }}</ion-col>
+        <ion-col size="6" class="contain__title">Segundo Apellido:</ion-col>
+        <ion-col size="6" class="contain__info">{{ usuario.secondLastName }}</ion-col>
+        <ion-col size="6" class="contain__title">Telefono:</ion-col>
+        <ion-col size="6" class="contain__info">{{ usuario.numberCell }}</ion-col>
+        <ion-col >
+          <ion-button color="danger" (click)="deleteUsu(usuario.id)">
+            <ion-icon name="trash"></ion-icon></ion-button>
+            <ion-button color="warning" (click)="editarUsu(usuario.id)">
+              <ion-icon name="create"></ion-icon>  </ion-button>
+        </ion-col>
+       
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+</ion-content>
+
+

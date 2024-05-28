@@ -21,4 +21,7 @@ public class Inventory {
   @Column(name = "opcion")
   private String option;
 
+  @Column(name = "estado")
+  private boolean state = true;
+
 }

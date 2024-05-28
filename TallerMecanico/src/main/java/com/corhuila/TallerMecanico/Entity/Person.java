@@ -39,4 +39,7 @@ public class Person {
   @Column(name = "correo_electronico")
   private String email;
 
+  @Column(name = "estado")
+  private boolean state = true;
+
 }

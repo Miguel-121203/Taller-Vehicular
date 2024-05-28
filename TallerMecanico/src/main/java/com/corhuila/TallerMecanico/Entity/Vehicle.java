@@ -24,11 +24,9 @@ public class Vehicle {
   @Column(name = "numero_placa", length = 6, nullable = false, unique = true)
   private String plate;
 
-  @Column(name = "kilometros_totales", nullable = false)
-  private double kilometers;
 
-  @Column(name = "modelo", length = 4)
-  private int model;
+  @Column(name = "modelo", length = 30)
+  private String model;
 
   @Column(name = "nivel_combustible")
   private int fuelLevel;

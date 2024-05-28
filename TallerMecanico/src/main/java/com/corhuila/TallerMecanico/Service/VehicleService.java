@@ -43,7 +43,6 @@ public class VehicleService implements IVehicleService {
       vehicleUpdate.setBrand(vehicle.getBrand());
       vehicleUpdate.setLine(vehicle.getLine());
       vehicleUpdate.setPlate(vehicle.getPlate());
-      vehicleUpdate.setKilometers(vehicle.getKilometers());
       vehicleUpdate.setModel(vehicle.getModel());
       vehicleUpdate.setFuelLevel(vehicle.getFuelLevel());
 
@@ -65,6 +64,11 @@ public class VehicleService implements IVehicleService {
       vehicle.setState(false);
       repository.save(vehicle);
     });
+  }
+
+  @Override
+  public void delete(Long id) {
+    repository.deleteById(id);
   }
 
   @Override

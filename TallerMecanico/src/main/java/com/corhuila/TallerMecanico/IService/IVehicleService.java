@@ -18,4 +18,6 @@ public interface IVehicleService {
 
   void delete(String plate);
 
+  void delete(Long id);
+
 }

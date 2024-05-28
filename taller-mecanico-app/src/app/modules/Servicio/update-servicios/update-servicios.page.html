@@ -1,0 +1,45 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <h2 class="section-title">ACTUALIZAR SERVICIO</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row  *ngIf="servicios">
+      <ion-col size="12" class="hidden">
+        <ion-label class="input-label">No</ion-label>
+        <ion-input type="hidden" [(ngModel)]="servicios.id"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">Descripcion</ion-label>
+        <ion-input type="text" [(ngModel)]="servicios.description"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">Cantidad</ion-label>
+        <ion-input type="text" [(ngModel)]="servicios.quantity"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">SubTotal</ion-label>
+        <ion-input type="text" [(ngModel)]="servicios.subTotal"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">Observaciones</ion-label>
+        <ion-textarea fill="solid" label="" labelPlacement="floating" [(ngModel)]="servicios.observations"></ion-textarea>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">Tecnico responsable</ion-label>
+        <ion-input type="text" [(ngModel)]="servicios.responsibleTechnician"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">Total</ion-label>
+        <ion-input type="text" [(ngModel)]="servicios.total"></ion-input>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="guardar()" expand="full">Guardar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

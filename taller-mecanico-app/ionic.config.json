@@ -1,0 +1,7 @@
+{
+  "name": "taller-mecanico-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

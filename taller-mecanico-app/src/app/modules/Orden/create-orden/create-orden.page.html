@@ -1,0 +1,41 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <h2 class="section-title">CREAR NUEVA ORDEN</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="hidden">
+        <ion-label class="input-label">No</ion-label>
+        <ion-input type="hidden" [(ngModel)]="orden.id"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">Numero de orden</ion-label>
+        <ion-input type="text" [(ngModel)]="orden.orderWork"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">Fecha de ingreso</ion-label>
+        <ion-datetime locale="es-CO"  [(ngModel)]="orden.dateEntry"></ion-datetime>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">Fecha entrega</ion-label>
+        <ion-datetime locale="es-CO" [(ngModel)]="orden.dateExit"></ion-datetime>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">Precio</ion-label>
+        <ion-input type="text" [(ngModel)]="orden.price"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label class="input-label">Numero de servicio</ion-label>
+        <ion-input type="text" [(ngModel)]="orden.serviceNumber"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="crearOrden()" expand="full">Guardar</ion-button>
+        <ion-button routerLink="/create-usuario" expand="full" color="warning">Siguiente</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

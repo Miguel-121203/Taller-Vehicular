@@ -26,14 +26,14 @@ public class VehicleController {
     return service.findById(id);
   }
 
-  @GetMapping("placa/{plate}")
+  @GetMapping("/{plate}")
   public Optional<Vehicle> findByPlate(@PathVariable String plate) {
 
     return service.findByPlate(plate);
   }
 
   @PostMapping()
-  public Vehicle save(@RequestBody Vehicle vehicle) {
+  public Vehicle save( Vehicle vehicle) {
     return service.save(vehicle);
   }
 
@@ -45,5 +45,10 @@ public class VehicleController {
   @DeleteMapping("estado/{plate}")
   public void delete(@PathVariable String plate) {
     service.delete(plate);
+  }
+
+  @DeleteMapping("{id}")
+  public void delete(@PathVariable Long id) {
+    service.delete(id);
   }
 }

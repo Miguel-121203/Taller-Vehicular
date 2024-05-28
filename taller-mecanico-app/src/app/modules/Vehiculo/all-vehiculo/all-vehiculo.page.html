@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<ion-content>
+  <ion-grid class="contain">
+    <ng-container *ngFor="let vehiculo of vehiculos">
+      <ion-row class="user-card" [hidden]="vehiculos.length<=0">
+        <ion-col size="12" class="contain__title">Vehiculo {{ vehiculo.id }}</ion-col>
+      </ion-row>
+      <ion-row class="user-card contain__row">
+        <ion-col size="6" class="contain__title">orden:</ion-col>
+        <ion-col size="6" class="contain__info">{{ vehiculo.orderId.orderWork }}</ion-col>
+        <ion-col size="6" class="contain__title">Propietario:</ion-col>
+        <ion-col size="6" class="contain__info">{{ vehiculo.personId.firstName }}</ion-col>
+        <ion-col size="6" class="contain__title">Marca:</ion-col>
+        <ion-col size="6" class="contain__info">{{vehiculo.brand  }}</ion-col>
+        <ion-col size="6" class="contain__title">Linea:</ion-col>
+        <ion-col size="6" class="contain__info">{{ vehiculo.line }}</ion-col>
+        <ion-col size="6" class="contain__title">Placas:</ion-col>
+        <ion-col size="6" class="contain__info">{{ vehiculo.plate }}</ion-col>
+        <ion-col size="6" class="contain__title">Modelo:</ion-col>
+        <ion-col size="6" class="contain__info">{{ vehiculo.model }}</ion-col>
+        <ion-col size="6" class="contain__title">Nivel de combustible:</ion-col>
+        <ion-col size="6" class="contain__info">{{ vehiculo.fuelLevel }}</ion-col>
+        <ion-col size="6" class="contain__title">Inventario:</ion-col>
+        <ion-col size="6" class="contain__info">{{ vehiculo.inventoryId.description }}</ion-col>
+        <ion-col size="6" class="contain__title">Servicio:</ion-col>
+        <ion-col size="6" class="contain__info">{{ vehiculo.servicioId.description }}</ion-col>
+        <ion-col >
+          <ion-button (click)="deleteVehi(vehiculo.id)" color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+          <ion-button (click)="editarVehi(vehiculo.id)" color="warning" >
+            <ion-icon name="create"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+</ion-content>

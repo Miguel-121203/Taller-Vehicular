@@ -1,0 +1,32 @@
+<ion-content>
+  <ion-grid class="contain" *ngIf="usuarioForm">
+    <div>
+      <h1>Detalle del usuario {{ id }}</h1>
+      <ion-row class="contain__row">
+        <ion-col size="6" class="contain__title">No.</ion-col>
+        <ion-col size="6" class="contain__info">{{ usuarioForm.get('id')?.value }}</ion-col>
+
+        <ion-col size="6" class="contain__title">Primer nombre</ion-col>
+        <ion-col size="6">
+          <ion-input formControlName="firstName" placeholder="Primer nombre"></ion-input>
+        </ion-col>
+
+        <ion-col size="6" class="contain__title">Segundo nombre</ion-col>
+        <ion-col size="6">
+          <ion-input formControlName="secondName" placeholder="Segundo nombre"></ion-input>
+        </ion-col>
+
+        <ion-col size="6" class="contain__title">Primer apellido</ion-col>
+        <ion-col size="6">
+          <ion-input formControlName="firstLastName" placeholder="Primer apellido"></ion-input>
+        </ion-col>
+
+        <ion-col size="6" class="contain__title">Segundo Apellido</ion-col>
+        <ion-col size="6">
+          <ion-input formControlName="secondLastName" placeholder="Segundo apellido"></ion-input>
+        </ion-col>
+      </ion-row>
+      
+    </div>
+  </ion-grid>
+</ion-content>

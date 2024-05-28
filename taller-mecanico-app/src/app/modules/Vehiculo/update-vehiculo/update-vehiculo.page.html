@@ -1,0 +1,47 @@
+<ion-content>
+  <form class="form-container">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title size="12">ACTUALIZAR VEHICULO</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-grid  *ngIf="vehiculo">
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Marca:</ion-label>
+          <ion-input [(ngModel)]="vehiculo.brand" name="brand" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Línea:</ion-label>
+          <ion-input [(ngModel)]="vehiculo.line" name="line" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Placa:</ion-label>
+          <ion-input [(ngModel)]="vehiculo.plate" name="plate" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Modelo:</ion-label>
+          <ion-input [(ngModel)]="vehiculo.model" name="model" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="form-item">
+          <ion-label class="input-label" position="stacked">Nivel de Combustible:</ion-label>
+          <ion-input type="number" [(ngModel)]="vehiculo.fuelLevel" name="fuelLevel" required></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item (click)="guardar()" expand="full" color="warning">Guardar</ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

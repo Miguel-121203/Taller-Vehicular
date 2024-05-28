@@ -1,0 +1,25 @@
+<app-header></app-header>
+<ion-content>
+  <ion-grid class="contain">
+    <ng-container *ngFor="let inventario of inventarios">
+      <ion-row class="user-card" [hidden]="inventarios.length <= 0">
+        <ion-col size="12" class="contain__title">Usuario {{ inventario.id }}</ion-col>
+      </ion-row>
+      <ion-row class="user-card contain__row">
+        <ion-col size="6" class="contain__title">Descripcion:</ion-col>
+        <ion-col size="6" class="contain__info">{{ inventario.description }}</ion-col>
+        <ion-col size="6" class="contain__title">Opcion:</ion-col>
+        <ion-col size="6" class="contain__info">{{ inventario.option }}</ion-col>
+        <ion-col >
+          <ion-button (click)="deleteInven(inventario.id)" color="danger">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+          <ion-button (click)="editarUsu(inventario.id)" color="warning">
+            <ion-icon name="create"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+</ion-content>

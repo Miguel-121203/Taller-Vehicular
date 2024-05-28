@@ -39,4 +39,7 @@ public class Order {
   @Column(name = "cotizacion")
   private double price;
 
+  @Column(name = "estado")
+  private boolean state = true;
+
 }

@@ -33,4 +33,7 @@ public class Servicio {
   @Column(name = "tecnico_responsable")
   private String responsibleTechnician;
 
+  @Column(name = "estado")
+  private boolean state = true;
+
 }
